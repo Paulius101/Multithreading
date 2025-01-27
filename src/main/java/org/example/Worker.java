@@ -22,7 +22,6 @@ public class Worker implements Runnable {
     public void run() {
         toSquare();
         resultArray.addAll(numberArray);
-
     }
 
     @Override

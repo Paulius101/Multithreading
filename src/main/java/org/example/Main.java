@@ -1,9 +1,9 @@
 package org.example;
-
 import java.util.ArrayList;
 
+
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
         ArrayList<Integer> arrayList = new ArrayList<>();
         arrayList.add(2);
         arrayList.add(3);
@@ -25,11 +25,16 @@ public class Main {
         Thread thread2 = new Thread(worker2);
         Thread thread3 = new Thread(worker3);
 
-        thread1.run();
-        thread2.run();
-        thread3.run();
+        thread1.start();
+        thread1.join();
 
-        System.out.println(worker1.getResultArray().toString());
+        thread2.start();
+        thread2.join();
+
+        thread3.start();
+        thread3.join();
+
+        System.out.println(resultList);
 
     }
 }
