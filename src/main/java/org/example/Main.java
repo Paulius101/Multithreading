@@ -19,7 +19,7 @@ public class Main {
 
         Worker worker1 = new Worker(arrayList.subList(0, 3), resultList);
         Worker worker2 = new Worker(arrayList.subList(3, 6), resultList);
-        Worker worker3 = new Worker(arrayList.subList(3, arrayList.size()), resultList);
+        Worker worker3 = new Worker(arrayList.subList(6, arrayList.size()), resultList);
 
         Thread thread1 = new Thread(worker1);
         Thread thread2 = new Thread(worker2);
